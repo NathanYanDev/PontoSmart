@@ -4,3 +4,4 @@ numpy
 pandas
 geocoder
 flask
+jinja2
