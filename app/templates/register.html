@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastro de Usuário - Sistema de Ponto{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-person-plus me-2"></i>
+                    Cadastro de Usuário
+                </h4>
+            </div>
+            <div class="card-body">
+                <form id="cadastroForm" method="POST" enctype="multipart/form-data">
+                    <!-- Nome -->
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <!-- Cargo -->
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Cargo</label>
+                        <input type="text" class="form-control" id="cargo" name="cargo" required>
+                    </div>
+
+                    <!-- Captura de Foto -->
+                    <div class="mb-4">
+                        <label class="form-label">Foto para Reconhecimento Facial</label>
+                        <div class="webcam-container">
+                            <video id="video" autoplay muted style="display: none;"></video>
+                            <canvas id="canvas" style="display: none;"></canvas>
+                            <div id="photoPreview" class="text-center p-4 border rounded">
+                                <i class="bi bi-camera display-4 text-muted"></i>
+                                <p class="text-muted mt-2">Clique no botão abaixo para capturar sua foto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <button type="button" id="startCamera" class="btn btn-outline-primary me-2">
+                                <i class="bi bi-camera-video me-1"></i>
+                                Iniciar Câmera
+                            </button>
+                            <button type="button" id="capturePhoto" class="btn btn-success me-2" style="display: none;">
+                                <i class="bi bi-camera me-1"></i>
+                                Capturar Foto
+                            </button>
+                            <button type="button" id="retakePhoto" class="btn btn-warning" style="display: none;">
+                                <i class="bi bi-arrow-clockwise me-1"></i>
+                                Nova Foto
+                            </button>
+                        </div>
+                        
+                        <input type="hidden" id="photoData" name="photo_data">
+                    </div>
+
+                    <!-- Botão Submit -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-check-circle me-2"></i>
+                            Cadastrar Usuário
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Status Messages -->
+                <div id="statusMessage" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

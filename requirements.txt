@@ -1,0 +1,7 @@
+face_recognition
+opencv-python-headless
+numpy
+pandas
+geocoder
+flask
+jinja2
