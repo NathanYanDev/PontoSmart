@@ -1,0 +1,50 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #f8f9fa;
+  margin-top: auto;
+}
+
+.webcam-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#video,
+#canvas {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+}
+
+.status-message {
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-success {
+  background-color: #d1edff;
+  color: #0c63e4;
+  border: 1px solid #b8daff;
+}
+
+.status-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
