@@ -1,4 +1,12 @@
+from config import Base, engine
+from models import User
+from models import Attendance
+from models import ImageData
+
 from flask import Flask, render_template, request, redirect
+
+Base.metadata.create_all(bind=engine)
+
 app = Flask(__name__)
 
 @app.route('/')

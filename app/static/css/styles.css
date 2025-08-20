@@ -17,11 +17,6 @@ footer {
   margin-top: auto;
 }
 
-.webcam-container {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
 #video,
 #canvas {
   width: 100%;
